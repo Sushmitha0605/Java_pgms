@@ -25,7 +25,7 @@ class Box{
 	}
 }
 
-public class ThisKeyword{
+public class thisKeyword{
 	public static void main(String[] args){
 		
 	Box Box1 = new Box(1,2,3);
