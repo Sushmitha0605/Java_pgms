@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class TotalPriceCalculator {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter quantity: ");
+		int qty = scanner.nextInt();
+
+		System.out.print("Enter unit price: ");
+		double unitPrice = scanner.nextDouble();
+
+double totalPrice = qty * unitPrice;
+System.out.println("Total Price: " + totalPrice);
+
+System.out.print("Enter discount in %: ");
+double discount = scanner.nextDouble();
+
+totalPrice = totalPrice - discount/100 * totalPrice;
+System.out.println("Total Price: " + totalPrice);
+
+scanner.close();
+}
+}
