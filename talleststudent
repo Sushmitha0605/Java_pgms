@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class TallestStudent {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter height of Student 1 (in cm): ");
+		double height1 = scanner.nextDouble();
+
+		System.out.print("Enter height of Student 2 (in cm): ");
+		double height2 = scanner.nextDouble();
+
+		System.out.print("Enter height of Student 3 (in cm): ");
+		double height3 = scanner.nextDouble();
+
+		double tallest = height1;
+		String student = "Student 1";
+
+		if (height2 > tallest) {
+		tallest = height2;
+		student = "Student 2";
+	}
+
+	if (height3 > tallest) {
+		tallest = height3;
+		student = "Student 3";
+	}
+	System.out.println(student + " is the tallest with a height of " + tallest + " cm.");
+	}
+}
