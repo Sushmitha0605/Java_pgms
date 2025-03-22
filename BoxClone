@@ -1,0 +1,34 @@
+class Box {
+	double depth,  width, height;
+
+	//construct clone of an object
+	Box(Box ob) {
+		depth = ob.depth;
+		width = ob.width;
+		height = ob.height;
+	}
+
+	Box(double d, double w, double h) {
+		depth = d;
+		width = w;
+		height = h;
+	}
+	
+	double Volume(){  
+		return depth*width*height;
+	}
+}
+    
+
+public class BoxClone {
+	public static void main(String[] args)
+	{
+
+		Box myBox1 = new Box(10,20,15);
+		Box myclone = new Box(myBox1);
+
+      double vol;
+      vol = myclone.Volume();
+      System.out.println("Volume of myclone is " + vol);
+	}
+}
