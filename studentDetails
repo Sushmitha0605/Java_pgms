@@ -1,0 +1,61 @@
+class Student {
+    String name;
+    int rollNum;
+    String address;
+    double totalMarks;
+    int standard;
+
+  Student() {
+    this.name = "Unknown";
+    this.rollNum = 0;
+    this.address = "Unknown";
+    this.totalMarks = 0;
+    this.standard = 1;
+  }
+
+  Student(String name, int rollNum, String address, double totalMarks, int standard) {
+    this.name = name;
+    this.rollNum = rollNum;
+    this.address = address;
+    this.totalMarks = totalMarks;
+    this.standard = standard;
+  }
+
+  void displayInfo() {
+    System.out.println("\nStudent Details: ");
+    System.out.println("Name: " + name);
+    System.out.println("Roll Number: " + rollNum);
+    System.out.println("Address: " + address);
+    System.out.println("Total Marks: " + totalMarks);
+    System.out.println("Standard: " + standard);
+  }
+
+  void promote() {
+    if (totalMarks > 35) {
+    standard++;
+    System.out.println(name + " has been promoted to standard " + standard);
+    }
+    else 
+    {
+      System.out.println(name + " has not been promoted. Total marks are below 35%.");
+    }
+  }
+}
+
+public class studentDetails {
+  public static void main(String[] args) {
+
+    Student student1 = new Student("Aman" , 101, "123 Main St", 80, 3);
+    Student student2 = new Student("Amar", 102, "456 Oak St", 30, 4);
+   
+    System.out.println("Before Promotion");
+    student1.displayInfo();
+    student2.displayInfo();
+    student1.promote();
+    student2.promote();
+    
+    System.out.println("After Promotion:");
+    student1.displayInfo();
+    student2.displayInfo();
+  }
+}
