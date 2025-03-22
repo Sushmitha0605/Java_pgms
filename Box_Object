@@ -33,3 +33,72 @@ public class BoxObject{
 		    System.out.println("Box2 and Box1 are not same");	
 	}
 }
+
+
+//user input
+import java.util.Scanner;
+
+class Box {
+    double length, width, height;
+
+    Box(double l, double w, double h) {
+        length = l;
+        width = w;
+        height = h;
+    }
+
+    boolean equals(Box o) {
+        if (o.length == this.length && o.width == this.width && o.height == this.height)
+            return true;
+        else
+            return false;
+    }
+}
+
+public class BoxObject {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter dimensions for Box1:");
+        System.out.print("Length: ");
+        double l1 = scanner.nextDouble();
+        System.out.print("Width: ");
+        double w1 = scanner.nextDouble();
+        System.out.print("Height: ");
+        double h1 = scanner.nextDouble();
+        
+        Box Box1 = new Box(l1, w1, h1);
+
+        System.out.println("Enter dimensions for Box2:");
+        System.out.print("Length: ");
+        double l2 = scanner.nextDouble();
+        System.out.print("Width: ");
+        double w2 = scanner.nextDouble();
+        System.out.print("Height: ");
+        double h2 = scanner.nextDouble();
+        
+        Box Box2 = new Box(l2, w2, h2);
+
+        System.out.println("Enter dimensions for Box3:");
+        System.out.print("Length: ");
+        double l3 = scanner.nextDouble();
+        System.out.print("Width: ");
+        double w3 = scanner.nextDouble();
+        System.out.print("Height: ");
+        double h3 = scanner.nextDouble();
+        
+        Box Box3 = new Box(l3, w3, h3);
+
+        if (Box3.equals(Box1))
+            System.out.println("Box3 and Box1 are the same.");
+        else
+            System.out.println("Box3 and Box1 are not the same.");
+
+        if (Box2.equals(Box1))
+            System.out.println("Box2 and Box1 are the same.");
+        else
+            System.out.println("Box2 and Box1 are not the same.");
+
+        scanner.close();
+    }
+}
