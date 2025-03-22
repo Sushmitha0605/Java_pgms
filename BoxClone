@@ -32,3 +32,106 @@ public class BoxClone {
       System.out.println("Volume of myclone is " + vol + "cubic meter");
 	}
 }
+
+//more boxes
+class Box {
+	double depth,  width, height;
+
+	//construct clone of an object
+	Box(Box ob) {
+		depth = ob.depth;
+		width = ob.width;
+		height = ob.height;
+	}
+
+	Box(double d, double w, double h) {
+		depth = d;
+		width = w;
+		height = h;
+	}
+	
+	double Volume(){  
+		return depth*width*height;
+	}
+}
+    
+
+public class BoxClone {
+	public static void main(String[] args)
+	{
+
+		Box myBox1 = new Box(25.36,41.326,11.25);
+		Box myBox2 = new Box(4,8,12);
+		Box myBox3 = new Box(myBox1);
+		Box myBox4 = new Box(myBox2);
+        Box myBox5 = new Box(myBox1);
+		Box myBox6 = new Box(myBox2);
+
+		
+
+        double vol;
+        vol = myBox1.Volume();
+        System.out.println("Volume of myBox1 is " + vol + "cubic meter");
+        vol = myBox2.Volume();
+        System.out.println("Volume of myBox2 is " + vol + "cubic meter");
+        vol = myBox3.Volume();
+        System.out.println("Volume of myBox3 is " + vol + "cubic meter");
+        vol = myBox4.Volume();
+        System.out.println("Volume of myBox4 is " + vol + "cubic meter");   
+        vol = myBox5.Volume();
+        System.out.println("Volume of myBox5 is " + vol + "cubic meter");
+        vol = myBox6.Volume();
+        System.out.println("Volume of myBox6 is " + vol + "cubic meter");
+	}
+}
+
+
+
+
+
+//user input
+import java.util.*;
+
+class Box {
+	double depth,  width, height;
+
+	//construct clone of an object
+	Box(Box ob) {
+		depth = ob.depth;
+		width = ob.width;
+		height = ob.height;
+	}
+
+	Box(double d, double w, double h) {
+		depth = d;
+		width = w;
+		height = h;
+	}
+	
+	double Volume(){  
+		return depth*width*height;
+	}
+}
+    
+
+public class BoxClone {
+	public static void main(String[] args)
+	{
+	    Scanner sc = new Scanner(System.in);
+         
+        System.out.println("Enter the dimensions for Box1 :");
+        System.out.println("Depth : ");
+        double d1 = sc.nextDouble();
+        System.out.println("Height : ");
+        double h1 = sc.nextDouble();
+        System.out.println("Width : ");
+        double w1 = sc.nextDouble();
+
+		Box myBox1 = new Box(d1,h1,w1);
+		Box myclone = new Box(myBox1);
+
+      double vol;
+      vol = myclone.Volume();
+      System.out.println("Volume of myclone is " + vol + "cubic meter");
+	}
+}
