@@ -6,3 +6,19 @@ public class Ternary
 		System.out.println(result);
 	}
 }
+
+
+
+//user input
+import java.util.*;
+public class Ternary
+{
+	public static void main(String[] args) {
+	    int time;
+	    Scanner sc = new Scanner(System.in);
+	    System.out.println("Enter the time :");
+	    time = sc.nextInt();
+	    String result = (time < 18)?"Good Day." : "Good Evening";
+		System.out.println(result);
+	}
+}
