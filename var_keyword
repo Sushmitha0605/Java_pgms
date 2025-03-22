@@ -1,8 +1,11 @@
 public class Var
 {
 	public static void main(String[] args) {
+	    //int
 	    var x = 100;
+            //char
 	    var z = 'a';
+	    //type inference is used in var keyword in which it automatically detects the datatype of a variable
 	    System.out.println(x);
 	    System.out.println(z);
 	}
