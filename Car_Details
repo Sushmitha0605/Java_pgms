@@ -1,0 +1,45 @@
+class Car {
+  private String brand, model;
+  private int year, speed;
+
+Car() {
+  this.brand = "Unknown";
+  this.model = "Unknown";
+  this.year = 2000;
+  this.speed = 150;
+}
+
+Car(String brand, String model, int year, int speed) {
+  this.brand = brand;
+  this.model = model;
+  this.year = year;
+  this.speed = speed;
+}
+
+void accelerate(int incrementSpeed) {
+  speed += incrementSpeed;
+}
+
+void displayInfo() {
+    System.out.println("\nCar Details: ");
+    System.out.println("Brand: " + brand + ", Model: " + model + ", Year: " + year + ", Speed: " + speed + " km/h");
+    System.out.println(model + " accelerated. New Speed: " + speed + " km/h");
+  }
+}
+
+public class CarDetails {
+ 
+  public static void main(String[] args) {
+    Car car1 = new Car("Toyota", "Corolla", 2022, 60);
+    Car car2 = new Car("Honda", "Civic", 2023, 70);
+    System.out.println("Before Acceleration:");
+    car1.displayInfo();
+    car2.displayInfo();
+    car1.accelerate(20);
+    car2.accelerate(30);
+    System.out.println("After Acceleration:");
+    car1.displayInfo();
+    car2.displayInfo();
+
+  }
+}
