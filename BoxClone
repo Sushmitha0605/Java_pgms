@@ -24,11 +24,11 @@ public class BoxClone {
 	public static void main(String[] args)
 	{
 
-		Box myBox1 = new Box(10,20,15);
+		Box myBox1 = new Box(25.36,41.326,11.25);
 		Box myclone = new Box(myBox1);
 
       double vol;
       vol = myclone.Volume();
-      System.out.println("Volume of myclone is " + vol);
+      System.out.println("Volume of myclone is " + vol + "cubic meter");
 	}
 }
