@@ -1,15 +1,15 @@
 //Access Control
 
 class Person{
-    private int age;
-    public int height;
+    private double age;
+    public double height;
     
-    Person(int a, int h){
+    Person(double a, double h){
         age = a;
         height = h;
     }
     
-    public int getAge(){
+    public double getAge(){
         return age;
     }
 }
@@ -19,7 +19,7 @@ class AccessControl{
         Person P1 = new Person(21, 165);
         System.out.println("Age of P1 : " +P1.age);//This will give error since age is private
         
-        int tempAge = P1.getAge();
+        double tempAge = P1.getAge();
         System.out.println("Age of P1 : " +tempAge);
         System.out.println("Height of P1 : " +P1.height);
     }
