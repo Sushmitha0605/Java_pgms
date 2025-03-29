@@ -1,0 +1,68 @@
+public class TopperFinder {
+    public static void main(String[] args) {
+        int[][] marks = {
+            {85, 90, 78}, 
+            {92, 88, 95}, 
+            {75, 85, 89}, 
+            {88, 91, 84},
+            {65, 69, 85},
+            {99, 99, 10}
+        };
+
+        String[] students = {"Amritha", "Anu", "Bhavya", "Bhoomi", "Chandu", "Dhanush"};
+        String[] subjects = {"Math", "Phy", "Chemistry"};
+
+        int numStudents = marks.length;
+        int numSubjects = marks[0].length;
+
+        for (int j = 0; j < numSubjects; j++) {
+            int maxMark = marks[0][j];
+            String topper = students[0];
+            boolean isSharedTopper = false;
+
+            for (int i = 1; i < numStudents; i++) {
+                if (marks[i][j] > maxMark) {
+                    maxMark = marks[i][j];
+                    topper = students[i];
+                    isSharedTopper = false;
+                } else if (marks[i][j] == maxMark) {
+                    isSharedTopper = true;
+                }
+            }
+
+            if (isSharedTopper) {
+                System.out.println("Shared Toppers in " + subjects[j] + ": ");
+                for (int i = 0; i < numStudents; i++) {
+                    if (marks[i][j] == maxMark) {
+                        System.out.println(students[i] + " with " + maxMark + " marks.");
+                    }
+                }
+            } else {
+                System.out.println("Topper in " + subjects[j] + ": " + topper + " with " + maxMark + " marks.");
+            }
+        }
+
+        int maxTotalMarks = -1;
+        String overallTopper = "";
+
+        for (int i = 0; i < numStudents; i++) {
+            int totalMarks = 0;
+            for (int j = 0; j < numSubjects; j++) {
+                totalMarks += marks[i][j];
+            }
+
+            if (totalMarks > maxTotalMarks) {
+                maxTotalMarks = totalMarks;
+                overallTopper = students[i];
+            } else if (totalMarks == maxTotalMarks) {
+                overallTopper += ", " + students[i];
+            }
+        }
+
+        if (overallTopper.contains(",")) {
+            System.out.println("Overall Shared Toppers: " + overallTopper + " with " + maxTotalMarks + " total marks.");
+        } else {
+            System.out.println("Overall Topper: " + overallTopper + " with " + maxTotalMarks + " total marks.");
+        }
+    }
+}
