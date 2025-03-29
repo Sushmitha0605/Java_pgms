@@ -1,0 +1,19 @@
+//Simple types are passed by value
+
+class Test {
+    void add10(int a) {
+        a = a + 10; // only the local copy of 'a' is modified
+    }
+}
+
+class ArgumentPassByValue {
+    public static void main(String[] args) {
+        Test ob = new Test();
+        int a = 15;
+
+        System.out.println("Value of a before call : " + a);
+
+        ob.add10(a); // 'a' is passed by value, not by reference
+        System.out.println("Value of a after call : " + a);
+    }
+}
