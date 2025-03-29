@@ -17,7 +17,7 @@ class Person{
 class AccessControl{
     public static void main(String[] args){
         Person P1 = new Person(21, 165);
-        //System.out.println("Age of P1 : " +P1.age);
+        System.out.println("Age of P1 : " +P1.age);//This will give error since age is private
         
         int tempAge = P1.getAge();
         System.out.println("Age of P1 : " +tempAge);
