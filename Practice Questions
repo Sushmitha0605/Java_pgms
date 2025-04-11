@@ -1,0 +1,228 @@
+//DATA TYPES IN JAVA
+public class Datatypes {
+    public static void main(String[] args) {
+        int a = 123;
+        boolean b = false;
+        char c = 'A';
+        double d = 25.36589;
+        float f = 3.14f;
+        byte B = 127;
+        short s = 12546;
+        long l = 1433545;
+        
+        System.out.println("Size of int: " + Integer.BYTES + " bytes");
+        System.out.println("Size of float: " + Float.BYTES + " bytes");
+        System.out.println("Size of char: " + Character.BYTES + " bytes");
+        System.out.println("Size of short: " + Short.BYTES + " bytes");
+        System.out.println("Size of double: " + Double.BYTES + " bytes");
+        System.out.println("Size of long: " + Long.BYTES + " bytes");
+        System.out.println("Size of byte: " + Byte.BYTES + " bytes");
+        System.out.println("Size of boolean: 1 byte");
+    }
+}
+
+//TTOTAL PRICE CALCULATOR
+import java.util.Scanner;
+
+class Quantity{
+    public static void main(String[] args){
+        int quantity;
+        double price, totalprice;
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the quantity : ");
+        quantity  = sc.nextInt();
+        
+        System.out.println("Enter the Price : ");
+        price  = sc.nextDouble();
+        
+        totalprice = quantity*price;
+        System.out.println("The Total Price is "+totalprice+"rs.");
+        
+        
+    }
+}
+
+//TALLEST STUDENT 
+import java.util.Scanner;
+
+class Talleststudent{
+    public static void main(String[] args){
+        double student1, student2, student3;
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the height of student 1 in cms : ");
+        student1  = sc.nextDouble();
+        
+        System.out.println("Enter the height of student 2 in cms : ");
+        student2  = sc.nextDouble();
+       
+        System.out.println("Enter the height of student 3 in cms : ");
+        student3  = sc.nextDouble();
+    
+        if(student1 > student2 && student1>student3){
+            System.out.println("The tallest student is student1 with height "+ student1+ "cms");
+        }
+        else if(student2>student1 && student2>student3){
+            System.out.println("The tallest student is student2 with height "+ student2+ "cms");
+
+        }
+        else{
+            System.out.println("The tallest student is student3 with height "+ student3+ "cms");
+        }
+        
+    }
+}
+
+//MY LAND YOUR LAND
+import java.util.Scanner; 
+ 
+public class LandAreaCalculator { 
+    public static void main(String[] args) { 
+        Scanner scanner = new Scanner(System.in); 
+        System.out.println("Select the shape of your land:\n1. Triangle\n2. Rectangle\n3. Circle\n"); 
+        int choice = scanner.nextInt(); 
+ 
+        double areaInSquareFeet = 0; 
+        switch (choice) { 
+            case 1:  
+                System.out.print("Enter base of the triangle (in feet): "); 
+                double base = scanner.nextDouble(); 
+                System.out.print("Enter height of the triangle (in feet): "); 
+                double height = scanner.nextDouble(); 
+                areaInSquareFeet = 0.5 * base * height; 
+                break; 
+ 
+            case 2:  
+                System.out.print("Enter length of the rectangle (in feet): "); 
+                double length = scanner. nextDouble(); 
+                System.out.print("Enter breadth of the rectangle (in feet): "); 
+                double breadth = scanner.nextDouble(); 
+                areaInSquareFeet = length * breadth; 
+                break; 
+ 
+            case 3: 
+                System.out.print("Enter radius of the circle (in feet): "); 
+                double radius = scanner.nextDouble(); 
+                areaInSquareFeet = Math.PI * radius * radius; 
+                break; 
+ 
+            default: 
+                System.out.println("Invalid choice. Please select a valid shape."); 
+                return;  
+        } 
+        double areaInCents = areaInSquareFeet / 435.6; 
+        System.out.printf("Area of the land: %.2f square feet%n", areaInSquareFeet); 
+        System.out.printf("Area of the land: %.2f cents%n", areaInCents); 
+    } 
+}
+
+
+//TOTAL BILL CALCULATING
+import java.util.Scanner;
+
+public class ShoppingBill {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the number of items you are buying: ");
+        int itemCount = sc.nextInt();
+
+        double totalBill = 0.0;
+
+        for (int i = 1; i <= itemCount; i++) {
+            System.out.println("\nEnter details for item " + i + ":");
+
+            System.out.print("Enter item name: ");
+            String itemName = sc.next();
+
+            System.out.print("Enter unit price of " + itemName + ": Rs. ");
+            double unitPrice = sc.nextDouble();
+
+            System.out.print("Enter quantity of " + itemName + ": ");
+            int quantity = sc.nextInt();
+
+            double itemTotal = unitPrice * quantity;
+            totalBill += itemTotal;
+
+            System.out.println("Total price for " + itemName + ": Rs. " + itemTotal);
+        }
+
+        System.out.println("\nTotal Bill: Rs. " + totalBill);
+
+        sc.close();
+    }
+}
+
+//ADDITION OF MATRICES
+
+import java.util.Scanner;
+
+public class MatrixAddition {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the order of the matrix   : ");
+        int n = sc.nextInt();
+
+        int[][] matrixA = new int[n][n];
+        int[][] matrixB = new int[n][n];
+        int[][] resultMatrix = new int[n][n];
+
+        System.out.println("Enter elements of Matrix A:");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print("Enter element at position A[" + (i + 1) + "][" + (j + 1) + "]: ");
+                matrixA[i][j] = sc.nextInt();
+            }
+        }
+
+        System.out.println("Enter elements of Matrix B:");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print("Enter element at position B[" + (i + 1) + "][" + (j + 1) + "]: ");
+                matrixB[i][j] = sc.nextInt();
+            }
+        }
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                resultMatrix[i][j] = matrixA[i][j] + matrixB[i][j];
+            }
+        }
+
+        System.out.println("\nResultant Matrix after addition:");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                System.out.print(resultMatrix[i][j] + "\t");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+
+
+class Person{
+    private String name;
+    
+    Person(String name){
+        this.name = name;
+    }
+    
+    void greet(){
+        System.out.println("Hello " + name + "!!");
+    }
+}
+public class PersonExample{
+    public static void main(String[] args){
+        Person p = new Person("Sushmitha");
+        p.greet();
+    }
+}
+
+
