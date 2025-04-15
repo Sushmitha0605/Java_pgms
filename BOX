@@ -41,17 +41,6 @@ public class BoxExample{
 	Box5.displayDetails();
 
 
-	System.out.println("Box 1 Volume :"+Box1.calculateVolume());
-	System.out.println("Box 2 Volume :"+Box2.calculateVolume());
-	System.out.println("Box 3 Volume :"+Box3.calculateVolume());
-	System.out.println("Box 4 Volume :"+Box4.calculateVolume());
-	System.out.println("Box 5 Volume :"+Box5.calculateVolume());
-
-	System.out.println("Box 1 Surface Area :"+Box1.calculateSurfaceArea());
-	System.out.println("Box 2 Surface Area :"+Box2.calculateSurfaceArea());
-	System.out.println("Box 3 Surface Area :"+Box3.calculateSurfaceArea());
-	System.out.println("Box 4 Surface Area :"+Box4.calculateSurfaceArea());
-	System.out.println("Box 5 Surface Area :"+Box5.calculateSurfaceArea());
 
 	}
 }
