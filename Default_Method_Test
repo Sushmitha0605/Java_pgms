@@ -1,0 +1,21 @@
+interface Vehical{
+    void start();
+
+    default void honk(){
+        System.out.println("Honk! Honk!");
+    }
+}
+
+class Car implements Vehical{
+    public void start(){
+        System.out.println("Car is starting..............");
+    }
+}
+
+public class DefaultMethodTest{
+    public static void main(String[] args){
+        Car car = new Car();
+        car.start();
+        car.honk();
+    }
+}
