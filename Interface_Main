@@ -21,6 +21,15 @@ class Cat implements Animal{
     }
 }
 
+class Cow implements Animal{
+    public void makeSound(){
+        System.out.println("Moow!");
+    }
+    public void eat(){
+        System.out.println("Cow is eating.....");
+    }
+}
+
 public class InterfaceMain{
     public static void main(String[] args){
         Animal dog = new Dog();
@@ -30,5 +39,9 @@ public class InterfaceMain{
         Animal cat = new Cat();
         cat.makeSound();
         cat.eat();
+
+        Animal cow = new Cow();
+        cow.makeSound();
+        cow.eat();
     }
 }
