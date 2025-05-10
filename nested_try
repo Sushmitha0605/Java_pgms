@@ -1,6 +1,7 @@
 class NestTry{
     public static void main(String[] args){
         try{
+            System.out.println("args = " +args[0]+args[1]+args[2]+args[3]);
             int a = args.length;
             int b = 42/a;
             System.out.println("a = " + a);
