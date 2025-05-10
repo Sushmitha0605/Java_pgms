@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class ChocolateDistribution
+{
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+
+        int totalChocolates = 0;
+        int numberOfStudents = 0;
+        int chocolatesNeeded = 0;
+
+        try
+        {
+            System.out.print("Enter the number of chocolates: ");
+            totalChocolates = scanner.nextInt();
+
+            System.out.print("Enter the number of students: ");
+            numberOfStudents = scanner.nextInt();
+
+            chocolatesNeeded = numberOfStudents * 5;
+        }
+        catch (Exception e)
+        {
+            System.out.println("Invalid input, please enter integers only.");
+            scanner.close();
+            return;
+        }
+
+        if (totalChocolates >= chocolatesNeeded)
+        {
+            System.out.println("Each student will get 5 chocolates.");
+            System.out.println("Total chocolates distributed: " + chocolatesNeeded);
+            System.out.println("Remaining chocolates: " + (totalChocolates - chocolatesNeeded));
+        }
+        else
+        {
+            System.out.println("Not enough chocolates to give each student 5 chocolates.");
+            System.out.println("You can only give each student " + (totalChocolates / numberOfStudents) + " chocolates.");
+        }
+
+        scanner.close();
+    }
+}
