@@ -1,0 +1,15 @@
+public class WrapperDemo{
+    public static void main(String[] args){
+        Character ch = Character.valueOf('A');
+        System.out.println("Character : " +ch);
+        System.out.println("To lower case: "+ Character.toLowerCase(ch));
+    
+        Boolean flag = Boolean.valueOf("True");
+        System.out.println("\n Boolean :  "+flag);
+        
+        Integer num1 = Integer.valueOf(100);
+        Integer num2 = Integer.valueOf("200");
+        System.out.println("\n Integer 1 : " +num1);
+        System.out.println("\n Integer 2 : " +num2);
+    }
+}
