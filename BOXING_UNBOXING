@@ -1,0 +1,7 @@
+class AutoBoxDemo{
+    public static void main(String[] args){
+        Integer iOb = 100; //autobpx an integer
+        int i = iOb; // auto-unbox
+        System.out.println(i + " " + iOb);
+    }
+}
